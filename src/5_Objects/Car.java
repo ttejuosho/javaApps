@@ -5,9 +5,10 @@ public class Car {
     String make;
     String model;
     double price;
-    boolean isRunning = false;
+    int mileage;
+    boolean isRunning;
 
-    Car(int year, String make, String model, double price, boolean isRunning){
+    Car(int year, String make, String model, double price, int mileage, boolean isRunning){
         this.year = year;
         this.make = make;
         this.model = model;
@@ -15,19 +16,26 @@ public class Car {
         this.isRunning = isRunning;
     }
 
-    Car mb = new Car(2023, "Toyota", "Highlander", 87450);
-
-    void start (){
-        isRunning = true;
+    boolean start (boolean isRunning){
         System.out.println("Car is now running.");
+        return isRunning;
     }
 
-    void stop (){
-        isRunning = false;
+    boolean stop (boolean isRunning){
         System.out.println("Car is no longer running.");
+        return isRunning;
     }
 
-    void drive(){
+    boolean drive(){
         System.out.println("You're driving the " + model);
+        return true;
+    }
+
+    // Overloaded Constructor
+    Car(int year, String make, String model, int mileage, boolean isRunning){
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
     }
 }

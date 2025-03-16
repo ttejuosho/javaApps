@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class StoreFrontApp {
     public static void main (String[] args){
+
         // Initialize Scanner
         Scanner scanner = new Scanner(System.in);
         char currency = '$';
